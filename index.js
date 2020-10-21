@@ -12,6 +12,7 @@ const routes = require('./routes');
 app.use('/', routes);
 
 app.listen(process.env.PORT || 3005, () => {
+    // process.env.PORT == setting us up for deployment
     console.log('Server is listening.')
 })
 
