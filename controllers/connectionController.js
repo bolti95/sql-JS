@@ -23,7 +23,8 @@ exports.postStaff = async (req, res) => {
 }
 
 exports.updateStaffMember = async (req, res) => {
-    functions.updateStaffMember();
+    let {ID, Name} = req.query;
+    functions.updateStaffMember(Name, ID);
     res.send('staff member updated')
 }
 
