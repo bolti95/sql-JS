@@ -14,3 +14,15 @@ exports.getStaffMember = async (req, res) => {
     console.log(display);
     res.send(display);
 }
+
+exports.postStaff = async (req, res) => {
+    // let { all of the values } = req.query
+
+    functions.createStaffMember();
+    res.send('Employee created')
+}
+
+exports.deleteStaffMember = async (req, res) => {
+    functions.deleteStaffMember();
+    res.send('staff member has been deleted')
+}
